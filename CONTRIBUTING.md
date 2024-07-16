@@ -92,7 +92,7 @@ We'll cover our code of conduct for healthy community participation, and then wa
 ### 2.1 Adherence to Linux Foundation's Code of Conduct
 Our Project subscribes to the Linux Foundation's Code of Conduct as represented in the Linux Kernel Code of Conduct. The Linux Kernel Code of Conduct is itself derived from the Contributor Covenant v1.4. Our Code of Conduct is based on v2.1, the most recent version at the time of writing.
 
-In an effort to keep the contribution guide focused and lean, our Code of Conduct is hosted on its own separate page: [Tazama Code of Conduct](Tazama-Code-of-Conduct.md).
+In an effort to keep the contribution guide focused and lean, our Code of Conduct is hosted on its own separate page: [Tazama Code of Conduct](/CODE_OF_CONDUCT.md).
 
 References:
 [Linux Kernel Code of Conduct](https://docs.kernel.org/process/code-of-conduct.html)
@@ -152,7 +152,7 @@ From a DevOps perspective, we make use of the following tools:
 
  - [Markdown](https://www.markdownguide.org/) for documentation hosted in GitHub
  - [Mermaid.js](http://mermaid.js.org/#/) for markdown-embedded diagrams in GitHub
- - [Drawio](https://www.drawio.com/) for embedded diagrams in GitHub. See [guide for draw.io](/guides/drawio-guide.md)
+ - [Drawio](https://www.drawio.com/) for embedded diagrams in GitHub. See [guide for draw.io](https://github.com/frmscoe/docs/blob/main/Guides/drawio-guide.md).
 
 [Top](#contribution-guide)
 
@@ -414,7 +414,7 @@ You have successfully set up a Tazama microservice processor on your local machi
 ## 4. How to Contribute
 ### 4.1 Understanding the Project Structure
 
-Read the [Product Overview](/README.md) for a detailed overview of the system.
+Read the [Product Overview](https://github.com/frmscoe/docs) for a detailed overview of the system.
 
 The Project organization on GitHub contains both PUBLIC and PRIVATE repositories. Core components of the system are in public repositories that are accessible to anyone:
 
@@ -465,9 +465,6 @@ Best practices for making changes.
 #### 5.2.1 Tazama coding practices
 
 The definition of done includes adhering to the coding practices below:
-
-[5.2.1.1. Linting rules](#5211-linting--linting-rules)
-[5.2.1.2. Gather asynchronous requests](#5212-gather-asynchronous-requests)
 
 ##### 5.2.1.1. Linting & Linting rules <!-- omit from toc -->
 
@@ -553,11 +550,11 @@ The tasks below must be completed by the code contributor before the Pull Reques
 
 **Code Documentation** - Source code has been commented. Complex or compound statements should be explained with a comment, either a comment block (e.g. `/* comment block here */` in TypeScript) or an in-line comment (e.g. `// in-line comment here` in TypeScript). Every function in Tazama must be documented with a preceding [JSDocs docstring](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html).
 
-**Developer Documentation** - The readme.md file in every GitHub code repository must contain documentation in markdown and diagrams, in Mermaid or editable `.svg` or `.png` images (See [guide for draw.io](/guides/drawio-guide.md)), to explain how the code works. 
+**Developer Documentation** - The readme.md file in every GitHub code repository must contain documentation in markdown and diagrams, in Mermaid or editable `.svg` or `.png` images. See  [guide for draw.io](https://github.com/frmscoe/docs/blob/main/Guides/drawio-guide.md), to explain how the code works. 
 
 **Licensing comment** Add the following string as a comment ("SPDX-License-Identifier: Apache-2.0") at the top of every file in the organization in GitHub that is capable of including a comment i.e. extensions="ts" "js" "env" "template" "eslintignore" "yaml" "properties" "npmrc" "editorconfig" "dockerignore" "gitignore" "prettierignore" "md" "helmignore" "Makefile" "sh" "npmignore" "plantuml" "yml".
 
-**Unit testing** - Unit test cases have been created in Jest (https://jestjs.io/), executed and are working successfully. Follow [coverage guidelines](/Technical/unit-test-coverage.md). 
+**Unit testing** - Unit test cases have been created in Jest (https://jestjs.io/), executed and are working successfully. Follow [coverage guidelines](https://github.com/frmscoe/docs/blob/main/Technical/unit-test-coverage.md). 
 
 **Processor performance benchmarking** Ensure that the Newman benchmark results have been presented on the PR as a comment. If you notice any spikes in the benchmark, please report the spike or reevaluate the implemented code.
 
@@ -565,7 +562,7 @@ The tasks below must be completed by the code contributor before the Pull Reques
 
 **GitHub CI/CD** - Ensure that all GitHub workflows have completed successfully during PR checks.
 
-**Logging** - Appropriate logging and log levels implemented [Logging framework](/Technical/Logging/The-Tazama-Logging-Framework.md) 
+**Logging** - Appropriate logging and log levels implemented [Logging framework](https://github.com/frmscoe/docs/Technical/Logging/The-Tazama-Logging-Framework.md) 
 
 **All acceptance criteria are met and Testing complete**
 
@@ -645,7 +642,7 @@ The aim of this style guide section is to ensure that Tazama documentation is co
 
 **Location:** General documentation is maintained in the `docs` repository. Developer documentation is maintained in the README in the repository where the source code is located.
 
-**File names** Markdown file names in the `docs` repository should be all lower case with dashes `-` (and no spaces) e.g. rule-processor-overview.md. The README files in the repositories are named with all CAPS.
+**File names** Markdown file names in the `docs` repository should be all lower case with dashes `-` (and no spaces) e.g. rule-processor-overview. The README files in the repositories are named with all CAPS.
 
 **Format:** Documentation is created in Markdown files. We recommend using [Markdown All in One by Yu Zhang](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) 
 
@@ -657,31 +654,29 @@ The aim of this style guide section is to ensure that Tazama documentation is co
 
 **Clarity:** Ensure that instructions are clear and straightforward. Avoid jargon or overly technical language to make the content accessible to new contributors.
 
-**Terminology:** Update the project [Glossary](/Product/Glossary.md) with acronyms, abbreviations, and industry-specific jargon. Consistent use of terminology helps avoid confusion. 
+**Terminology:** Update the project [Glossary](https://github.com/frmscoe/docs/blob/main/Product/Glossary.md) with acronyms, abbreviations, and industry-specific jargon. Consistent use of terminology helps avoid confusion. 
 
 **Consistency:** Maintain a consistent structure in the text, using bullet points or numbered lists for step-by-step instructions. This helps in readability and easy navigation. We recommend [The Ultimate Markdown Cheat Sheet/ numbered lists and bullets](https://github.com/lifeparticle/Markdown-Cheatsheet?tab=readme-ov-file#lists)
 
 **Headings and Structure:** Use multiple levels of numbered headings, for example in this Contribution Guide. This helps in organizing content logically and makes it easier to navigate. We recommend [The Ultimate Markdown Cheat Sheet/ headings](https://github.com/lifeparticle/Markdown-Cheatsheet?tab=readme-ov-file#headings)
 
 **Table of Contents** Include a table of contents at the top of the page, for example in this Contribution Guide, and link to the top of the page at intervals through the document e.g. [Top](#contribution-guide)
-![Top](../images/contribution-guide-style-top.png)
+![Top](/images/contribution-guide-style-top.png)
 
 **Detail:** Provide enough detail to guide the contributor but avoid overwhelming them with information. Include links to additional resources for those who want to dive deeper.
 
 **Code Formatting:** Code snippets should be formatted in its own distinct block, using triple backticks.  Within documentation, JSON should be formatted automatically using `Shift`+`Alt`+`f`.
-![json snippet](../images/contribution-guide-style-json.png)
+![json snippet](/images/contribution-guide-style-json.png)
 
 **Backticks** Single `backticks` ` are used to format inline code, commands, variables, filenames within a sentence. Using backticks appropriately helps in clearly distinguishing code or special text from regular content, enhancing readability and comprehension.
 
 **Links and References:** Set rules for linking to external resources, citing sources, and referencing other parts of the documentation. This includes guidelines on hyperlink text and formatting. We recommend [The Ultimate Markdown Cheat Sheet /links and references](https://github.com/lifeparticle/Markdown-Cheatsheet?tab=readme-ov-file#links)
 
-**Images:** Images should be editable `.svg` or `.png` files. See [guide for draw.io](/guides/drawio-guide.md).  All images should be saved in the docs/images folder.  
+**Images:** Images should be editable `.svg` or `.png` files. See  [guide for draw.io](https://github.com/frmscoe/docs/blob/main/Guides/drawio-guide.md). All images should be saved in the docs/images folder.  
 
-![docs/images folder](../images/contribution-guide-style-images-folder.png)
+![docs/images folder](/images/contribution-guide-style-images-folder.png)
 
-Image file names should be lower case with dashes `-` (and no spaces).  Include the document name and/or section name where the image will be inserted e.g. contribution-guide-style-images-folder.png 
-
-![image name](../images/contribution-guide-style-image-name.png)
+Image file names should be lower case with dashes `-` (and no spaces). Include the document name and/or section name where the image will be inserted e.g. contribution-guide-style-images-folder.png 
 
 [Top](#contribution-guide)
 
@@ -695,7 +690,7 @@ How to propose new features or enhancements.
 ## 9. Legal Compliance
 ### 9.1 Licensing Information
 
-You can access the Tazama License here > [SPDX-License-Identifier: Apache-2.0](https://github.com/frmscoe/tazama-project/blob/main/LICENSE)
+You can access the Tazama License here > [SPDX-License-Identifier: Apache-2.0](https://github.com/frmscoe/.github/blob/main/LICENSE)
 
 ### 9.2 Contributor License Agreement (CLA)
 Information about and how to sign the CLA.
@@ -731,4 +726,4 @@ How to contact the core team for assistance.
 | Contributors | Everyone who has contributed something back to the project
 | Community Members | People who use the project. They might be active in conversations or express their opinion on the project's direction
 
-Project [Glossary](/Product/Glossary.md)
+Project [Glossary](https://github.com/frmscoe/docs/blob/main/Product/Glossary.md)
