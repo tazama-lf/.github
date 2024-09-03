@@ -2,7 +2,10 @@
 
 # Contribution Guide
 
+## Table of Contents
+
 - [Contribution Guide](#contribution-guide)
+  - [Table of Contents](#table-of-contents)
   - [1. Introduction](#1-introduction)
     - [1.1 Overview of the Project](#11-overview-of-the-project)
     - [1.2 Importance of Contributions](#12-importance-of-contributions)
@@ -171,7 +174,7 @@ Before you begin working on an existing or new Tazama microservice processor, en
  - **Git**:
     - Install Git by visiting the official [Git website](https://git-scm.com/).
     - Follow the installation instructions for your operating system.
-    - You can also use [GitHub Desktop](https://desktop.github.com/) or [GitHub CLI](https://cli.github.com/), though this guide is written specifically for Git.
+    - Also install [GitHub Desktop](https://desktop.github.com/) or [GitHub CLI](https://cli.github.com/), though this guide is written specifically for Git.
 
  - **Code Editor**:
     - Install a code editor of your preference (e.g. [Visual Studio Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/), [Sublime Text](https://www.sublimetext.com/), [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/) (RIP [Atom](https://github.blog/2022-06-08-sunsetting-atom/))).
@@ -193,7 +196,7 @@ Follow these step-by-step instructions to get your local machine ready to work o
  - Generate a GitHub Personal Access Token to access the GitHub API:
    - Visit the GitHub Tokens page while logged into your GitHub account (Click your profile picture in the top right corner, then `Settings`, then `Developer settings`, then `Personal access tokens`, then `Tokens (classic)`)
    - Click on the `Generate new token` button and select `Generate new token (classic)`.
-   - Provide a name for your token and select the scopes or permissions required. For this case, you will need at least the `read:packages` scope.
+   - Provide a name for your token and select the scopes or permissions required. For this case, you will need at least the `write:packages` and `read:org` scope.
    - Scroll down and click on the `Generate token` button at the bottom.
    - Copy the generated token immediately (this token won't be visible again).
 
