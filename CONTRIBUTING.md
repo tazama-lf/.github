@@ -48,7 +48,8 @@
     - [11.2 Contact Information](#112-contact-information)
   - [12. Appendix](#12-appendix)
     - [12.1. Additional Resources](#121-additional-resources)
-    - [12.2 Glossary](#122-glossary)
+    - [12.2 Logger Service Template](#122-logger-service-template)
+    - [12.3 Glossary](#123-glossary)
 
 
 ## 1. Introduction
@@ -565,7 +566,9 @@ The tasks below must be completed by the code contributor before the Pull Reques
 
 **GitHub CI/CD** - Ensure that all GitHub workflows have completed successfully during PR checks.
 
-**Logging** - Appropriate logging and log levels implemented [Logging framework](https://github.com/frmscoe/docs/Technical/Logging/The-Tazama-Logging-Framework.md) 
+**Logging** - Integration with the Tazama Logger Service. Appropriate logging and log levels implemented 
+- [Logging framework](https://github.com/tazama-lf/docs/blob/5965e608eaf560b650642de734d98b0f2e7168a0/Technical/Logging/Logging-Framework-Architecture.md) - Architecture of logging services
+- [Code Sample](#122-logger-service-template) - Logger service code template for processors
 
 **All acceptance criteria are met and Testing complete**
 
@@ -713,13 +716,93 @@ Where to find help.
 How to contact the core team for assistance.
 
 ## 12. Appendix
-### 12.1. Additional Resources
+### 12.1 Additional Resources
 
 <https://opensource.guide/>
 
 [Top](#contribution-guide)
 
-### 12.2 Glossary
+### 12.2 Logger Service Template
+
+A simple template for the minimum to integrate a logger service'
+#### index.ts
+```ts
+import { LoggerService } from '@tazama-lf/frms-coe-lib';
+import type { ProcessorConfig } from '@tazama-lf/frms-coe-lib/lib/config/processor.config';
+import { validateProcessorConfig } from '@tazama-lf/frms-coe-lib/lib/config';
+
+// this line will validate that you've got the mandatory processor ENV variables set, and populate the response with the values:
+let configuration: ProcessorConfig = validateProcessorConfig();
+
+export const loggerService: LoggerService = new LoggerService(configuration);
+
+// By default, the logger will log to Console if NODE_ENV=dev or NODE_ENV=test
+// This will log to the Sidecar which will be deployed with your processor based on the deployment file.
+const msgId = crypto.randomUUID(); 
+const service = 'logger-example';
+
+// trace, debug, log (info), warn, error, fatal
+loggerService.log('sample log', service, msgId);  
+```
+
+### .env
+```
+NODE_ENV=dev
+FUNCTION_NAME=relay-service
+# MAX_CPU requirement as part of standard env validation for processors in tazama
+MAX_CPU=1 
+
+# SIDECAR_HOST requirement for sidecar companion processor (kubernetes)
+# SIDECAR_HOST=0.0.0.0:5000 
+```
+
+### Dockerfile
+```Dockerfile
+ARG BUILD_IMAGE=node:20-bullseye
+ARG RUN_IMAGE=gcr.io/distroless/nodejs20-debian11:nonroot
+
+# Transpile to JS
+FROM ${BUILD_IMAGE} AS builder
+LABEL stage=build
+
+WORKDIR /home/app
+COPY ./src ./src
+COPY ./package*.json ./
+COPY ./tsconfig.json ./
+COPY .npmrc ./
+ARG GH_TOKEN
+
+RUN npm ci --ignore-scripts
+RUN npm run build
+
+# Clean up dev
+FROM ${BUILD_IMAGE} AS dep-resolver
+LABEL stage=pre-prod
+
+COPY package*.json ./
+COPY .npmrc ./
+ARG GH_TOKEN
+RUN npm ci --omit=dev --ignore-scripts
+
+# Runtime
+FROM ${RUN_IMAGE} AS run-env
+USER nonroot
+
+WORKDIR /home/app
+COPY --from=dep-resolver /node_modules ./node_modules
+COPY --from=builder /home/app/build ./build
+COPY package.json ./
+COPY service.yaml ./
+COPY deployment.yaml ./
+
+ENV FUNCTION_NAME=relay-service
+ENV NODE_ENV=production
+ENV SIDECAR_HOST=0.0.0.0:5000
+
+CMD ["build/index.js"]
+```
+
+### 12.3 Glossary
 
 | Term | Definition |
 |---|---|
