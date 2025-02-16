@@ -443,20 +443,20 @@ If there are currently no issues under this label, feel free to explore the proj
 
 ```mermaid
 flowchart TB
-  A[1. Create Issue] -->B{Contributor}
-  B -->|External Contributors| C[Fork Repository]
-  C --> D
-  B -->|Internal Contributors| D(2. Clone Repository)
-  D -->E(3. Create<br>Feature<br>Branch)
-  E -->F[4. Develop Feature]
-  F -->G[5. Commit Changes]
-  G -->I[6. Create Pull Request]
-  I -->J{7. Code Review}
-  J -->|Request Changes| F
-  J -->|Approve| K[8. Merge PR to Dev]
-  K -->L[9. Close Issue]
-  L -->M[10. Release to Main]
-  M -->N[11. Monitor & Feedback]
+    A[Create Issue] --> B{Contributor}
+    B -->|External contributors| C[Fork Repo]
+    C --> D[Clone Repo]
+    B -->|Internal contributors| D
+    D --> E[Create Feature Branch]
+    E --> F[Develop Feature]
+    F --> G[Commit Changes]
+    G --> H[Create Pull Request]
+    H --> I{Code Review}
+    I -->|Request Changes| F
+    I -->|Approve| J[Merge PR to Dev]
+    J --> K[Close Issue]
+    K --> L[Release to Main]
+    L --> M[Monitor & feedback]
 ```
 
 [Top](#contribution-guide)
