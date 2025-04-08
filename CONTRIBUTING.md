@@ -10,7 +10,7 @@
   - [Overview of the project](#overview-of-the-project)
   - [About this guide](#about-this-guide)
     - [Helping with this guide](#helping-with-this-guide)
-  - [New to Open Source Software (OSS)](#new-to-open-source-software-oss)
+  - [New to Open Source Software (OSS)?](#new-to-open-source-software-oss)
   - [How to contribute](#how-to-contribute)
   - [Understanding the project structure](#understanding-the-project-structure)
   - [Finding something to work on](#finding-something-to-work-on)
@@ -51,7 +51,7 @@ We'll cover our code of conduct for healthy community participation, and then wa
 
 We have established a Tazama Contribution Guide Working Group for the purposes of expanding and improving this contribution guide.  Review our [miro board](https://miro.com/welcomeonboard/U2R1K3c5b3dqT2RwclhYcFhMd3BkWVRVVGRESDRhS2ZZZ2JLdW14aGcwTDdUY0d2SU9qQmJaOFJ5RHRUT3RSUWpncXdyUW5wVmU0OTRGeTJzbTBJZjJhcjYrSEJadHBtTEhUeGEvdFV2b0kvc3I5eGI4dTZyME1GTm1YZjFYcmJQdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=687611079372) for an overview of the process for providing input to our contribution guide and for an outline of content ideas and areas for improvement. 
 
-### New to Open Source Software (OSS)
+### New to Open Source Software (OSS)?
 <details>
   <summary>Are you new to open source software?</summary>
 
