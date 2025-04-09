@@ -183,23 +183,32 @@ References:
 <div style="text-align: right"><a href="#top">Top</a></div>
 
 ## Tazama product overview
+
 *Placeholder: Overview of Tazama components*
+
 *Placeholder: Technology stack overview*
+
 *Placeholder: Product vision/Roadmap*
+
 [Tazama design principles](https://github.com/tazama-lf/docs/blob/dev/Guides/tazama-design-principles.md)
+
 <div style="text-align: right"><a href="#top">Top</a></div>
 
 ## Guides for each persona
 
 ### For Everyone
+
 [Licensing and Contributor Agreements](https://github.com/tazama-lf/docs/blob/dev/Guides/licensing.md)
 
 **General contribution standards/guidelines**
 [Definition of done](https://github.com/tazama-lf/docs/blob/dev/Guides/definition-of-done.md)
+
 [Committing your changes](https://github.com/tazama-lf/docs/blob/dev/Guides/committing-changes.md)
 
 *Placeholder: Submitting a PR*
+
 *Placeholder: Code review process*
+
 *Placeholder: Release management process*
 
 **Creating GitHub issues**
@@ -212,12 +221,17 @@ References:
 
 ###### Typescript
 [Required technical skills and knowledge](https://github.com/tazama-lf/docs/blob/dev/Guides/skills-and-knowledge.md)
+
 [Setting Up the development environment](https://github.com/tazama-lf/docs/blob/dev/Guides/dev-set-up-environment.md)
+
 [Tazama coding practices](https://github.com/tazama-lf/docs/blob/dev/Guides/dev-coding-practices.md)
 
 *Placeholder: Guide for building a new rule processor*
+
 *Placeholder: Recommended tools*
+
 *Placeholder: Coding templates*
+
 *Placeholder: Tutorials*
 
 ###### Python
@@ -231,28 +245,47 @@ References:
 <div style="text-align: right"><a href="#top">Top</a></div>
 
 ### For Document Writers
+
 [Documentation style guide](https://github.com/tazama-lf/docs/blob/dev/Guides/docs-style-guide.md)
+
 [Guide for including diagrams in markdown files](https://github.com/tazama-lf/docs/blob/dev/Guides/drawio-guide.md)
+
 *Placeholder: Markdown recommended practices*
+
 *Placeholder: Tools and setup : VScode with extensions*
+
 *Placeholder: How to contribute Whitepapers, Case Studies*
+
 <div style="text-align: right"><a href="#top">Top</a></div>
 
 ### For DevOps Engineers
 *Placeholder: Contribution process*
+
 *Placeholder: Contribution areas: CI/CD pipelines, Helm Charts*
+
 *Placeholder: CI/CD pipeline structure: GitHub Actions; Jenkins*
+
 *Placeholder: Infrastructure Automation: Docker, Kubernetes*
+
 *Placeholder: CI/CD pipeline structure: GitHub Actions; Jenkins*
+
 *Placeholder: Tools*
+
 <div style="text-align: right"><a href="#top">Top</a></div>
 
 ### For QA Analysts/ Testers
 *Placeholder: End-to-end testing process*
+
 *Placeholder: Contribution types: Test cases, unit tests, E2E tests, automation scripts*
+
 *Placeholder: Testing tools: Jest, Postman, Newman*
+
 *Placeholder: Testing standards: Unit test coverage*
+
 *Placeholder: Contribution process: Writing and submitting test cases*
+
 *Placeholder: Testing standards*
+
 *Placeholder: Tools*
+
 <div style="text-align: right"><a href="#top">Top</a></div>
